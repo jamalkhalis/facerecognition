@@ -41,34 +41,37 @@ class Register extends React.Component {
 	render() {
 		return (
 			<div>
-				<article className="br3 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
-					<main className="pa4 black-80">
+				<article className="br3 ba dark-gray b--black-10 mv4 w-80 w-60-m w-30-l mw6 shadow-5 center">
+					<main className="pv4 ph4-l black-80 w-90">
 					  <div className="measure">
 					    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-					      <legend className="f1 fw6 ph0 mh0">Register</legend>
+					      <legend className="f1 fw6 ph0 mh0 white">Register</legend>
 
 					      <div className="mt3">
-					        <label className="db fw6 lh-copy f6" htmlFor="name">Full Name</label>
+					        <label className="db fw6 lh-copy f6 tl color-violet" htmlFor="name">Full Name</label>
 					        <input 
 					        	onChange = { this.onNameChange }
-					        	className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+					        	className="input-reset ba b--black-20 pa2 mb2 db w-100 color-violet br2" 
 					        	type="text" name="name"  id="name" 
+					        	placeholder="Enter your name"
 					        />
 					      </div>
 
 					      <div className="mt3">
-					        <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
+					        <label className="db fw6 lh-copy f6 tl color-violet" htmlFor="email-address">Email</label>
 					        <input
 					        	onChange = { this.onEmailChange } 
-					        	className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+					        	className="input-reset ba b--black-20 pa2 mb2 db w-100 color-violet br2" 
 					        	type="email" name="email-address"  id="email-address" 
+					        	placeholder="Enter your email"
 					        />
 					      </div>
 					      <div className="mv3">
-					        <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
+					        <label className="db fw6 lh-copy f6 tl color-violet" htmlFor="password">Password</label>
 					        <input 
 					        	onChange = { this.onPasswordChange}
-					        	className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+					        	className="input-reset ba b--black-20 pa2 mb2 db w-100 color-violet br2" 
+					        	placeholder="Enter your password"
 					        	type="password" name="password"  id="password" 
 					        />
 					      </div>
@@ -76,7 +79,7 @@ class Register extends React.Component {
 					    <div className="">
 					      <input 
 					      	onClick = { () => this.onSubmitRegister()}
-					      	className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
+					      	className="b ph3 pv2 input-reset ba b--white bg-transparent grow pointer f6 dib tl white br2" 
 					      	type="submit" 
 					      	value="Register" 
 					      />
@@ -84,7 +87,7 @@ class Register extends React.Component {
 					    <div className="lh-copy mt3">
 					      <p 
 					      	onClick={() => this.props.onRouteChange('signin') }
-					      	className="f6 link dim black db pointer"
+					      	className="f6 link dim tc color-violet db pointer"
 					      >
 					      	Sign In
 					      </p>

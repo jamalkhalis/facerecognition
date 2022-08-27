@@ -1,18 +1,73 @@
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue white;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+  /*background: linear-gradient(270deg, #F0F2F0 0%, #000C40 100%);*/
+  background: #000C40;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+
+
 body {
   margin: 0;
   font-family: "Courier New", Courier, monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(89deg, #FF5EDF 0%, #04C8DE 100%);
+  color: white;
+  /*background: linear-gradient(89deg, #FF5EDF 0%, #04C8DE 100%);*/
+  background: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
 
 button {
   cursor: pointer;
+}
+
+h1 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"!important;
+}
+
+.color-violet {
+  color: #000C40;
+}
+
+.color-linear-gradient {
+  /*font-size: 72px;*/
+  background: -webkit-linear-gradient(89deg, #F0F2F0 0%, #000C40 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.linear-gradient-bg-lr {
+  background: linear-gradient(89deg, #F0F2F0 0%, #000C40 100%);
+}
+
+.linear-gradient-bg-rl {
+  background: linear-gradient(89deg, #000C40 0%, #F0F2F0 100%);
+}
+
+.linear-gradient-color-lr {
+  color : linear-gradient(89deg, #F0F2F0 0%, #000C40 100%);
+}
+
+.linear-gradient-color-rl {
+  color : linear-gradient(89deg, #000C40 0%, #F0F2F0 100%);
 }

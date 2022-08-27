@@ -4,7 +4,6 @@ import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Signin from "./components/Signin/Signin";
 import Register from "./components/Register/Register";
-import Logo from "./components/Logo/Logo";
 import Rank from "./components/Rank/Rank";
 import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
@@ -111,37 +110,38 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="App">
 
-        <Particles
-              id="tsparticles"
-              init={this.customInit}
-              options={ParticlesOption}
-        />
+    let content;
 
-        <Navigation onRouteChange={ this.onRouteChange } isSignIn={ this.state.isSignIn }/>
-
-        <Logo />
-
-        {
-
-          this.state.route === "home"
-
-          ?   <div>
+    if (this.state.route === "home") {
+      content = (
+              <div>
                 <Rank user = { this.state.user } /> 
                 <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} /> 
                 <FaceRecognition box={ this.state.box } showImage={ this.state.imageUrl } />
               </div>
-
-          :   (
-                this.state.route === "signin"
-                ? <Signin loadUser = { this.loadUser } onRouteChange={ this.onRouteChange }/>
-                : <Register loadUser = { this.loadUser } onRouteChange={ this.onRouteChange } />
               )
-          
-        }
-      
+    } else if (this.state.route === "signin") {
+      content = <Signin loadUser = { this.loadUser } onRouteChange={ this.onRouteChange }/>
+    } else {
+      content = <Register loadUser = { this.loadUser } onRouteChange={ this.onRouteChange } />
+    }
+
+    return (
+      <div className="App">
+
+          <div className="bg-all-pages"></div>
+
+            <Particles
+                  id="tsparticles"
+                  init={this.customInit}
+                  options={ParticlesOption}
+            />
+
+            <Navigation onRouteChange={ this.onRouteChange } isSignIn={ this.state.isSignIn }/>
+
+            { content }
+                  
       </div>
     );
   }

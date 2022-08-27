@@ -14,4 +14,129 @@
   left: 0;
   bottom: 0;
   z-index: -1;
-} 
+}
+
+.bg-all-pages {
+  background: linear-gradient(89deg, #F0F2F0 0%, #000C40 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+
+.bg-linear-gradient {
+  background: linear-gradient(89deg, #F0F2F0 0%, #000C40 100%);
+  position: absolute;
+  width: calc(100% - 2rem);
+  right: 0;
+  left: 0;
+  height: 100%;
+  margin: 1rem;
+  border-radius: 10px;
+  z-index: -2;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .register-button {
+        font-size: 13px !important;
+        padding: 0.8rem 1rem !important;
+        margin-right: 1.6em !important
+
+  }
+
+  .signin-button {
+        font-size: 13px !important;
+        padding: 0.8rem 1rem !important;
+  }
+
+  .logo-mobile {
+        width: 50px !important;
+        height: 50px !important;
+  }
+
+  .logo-mobile > div > img {
+    padding-top: .6px !important;
+  }
+
+  .logo-title {
+    font-size: 1.3rem !important;
+  }
+
+}
+
+@media only screen and (max-width: 530px) {
+
+  .register-button {
+        font-size: 11px !important;
+        border-radius: 6px !important;
+        padding: 0.5rem .7rem !important;
+        margin-right: 1.3em !important
+
+  }
+
+  .signin-button {
+        font-size: 11px !important;
+        border-radius: 6px !important;
+        padding: 0.5rem .7rem !important;
+  }
+
+  .logo-mobile {
+        width: 30px !important;
+        height: 30px !important;
+  }
+
+  .logo-mobile > div > img {
+    padding-top: .6px !important;
+  }
+
+  .logo-title {
+    font-size: .6rem !important;
+    margin: 0;
+    margin-left: -1em;
+    padding: 0;
+  }
+
+  .img-face-recognition {
+    width: 80vw !important;
+  }
+
+}
+
+@media only screen and (max-width: 378px) {
+
+  .register-button {
+        font-size: 7px !important;
+        border-radius: 4px !important;
+        padding: 0.2rem .3rem !important;
+        margin-right: 1em !important
+  }
+
+  .signin-button {
+        font-size: 7px !important;
+        border-radius: 4px !important;     
+        padding: 0.2rem .3rem !important;
+  }
+
+  .logo-mobile {
+        width: 14px !important;
+        height: 14px !important;
+  }
+
+  .logo-mobile > div > img {
+    padding-top: 0px !important;
+  }
+
+  .logo-title {
+    font-size: .3rem !important;
+    margin: 0;
+    margin-left: -14px;
+    padding: 0;
+  }
+
+}

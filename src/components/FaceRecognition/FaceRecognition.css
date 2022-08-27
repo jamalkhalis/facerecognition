@@ -6,3 +6,16 @@
 	justify-content: center;
 	cursor: pointer;
 }
+
+.z-index {
+	overflow-x: hidden;
+	/*z-index: 3;*/
+}
+
+.box-sizing-border {
+  box-sizing: border-box; 
+}
+
+.width-500 {
+	width: 500px;
+}
